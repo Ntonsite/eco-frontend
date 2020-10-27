@@ -1,0 +1,18 @@
+<form #form="ngForm">
+  <!--  Product Name-->
+  <div class="form-group">
+    <label>Product Name</label>
+    <input name="pname" #productname="ngModel" [(ngModel)]="service.formData.name" class="form-control">
+  </div>
+  <!--  Product Quantity-->
+  <div class="form-group">
+    <label>Product Quantity</label>
+    <input name="quantity" #productQuantity="ngModel" [(ngModel)]="service.formData.quantity" class="form-control">
+  </div>
+
+  <!--  Product Price-->
+  <div class="form-group">
+    <label>Product Price</label>
+    <input name="price" #productPrice="ngModel" [(ngModel)]="service.formData.price" class="form-control">
+  </div>
+</form>
