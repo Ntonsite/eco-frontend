@@ -12,17 +12,17 @@ export class ProductsComponent implements OnInit {
   constructor(private service: ProductService) { }
 
   ngOnInit() {
+    this.resetForm();
   }
 
-  resetForm(form : NgForm){
-    form.resetForm();
+  resetForm(form ? : NgForm){
+    if(form != null)
+      form.resetForm();
     this.service.formData = {
-
       id: null,
-      name: '',
+      productName: '',
       quantity: null,
       price: null
-
     }
 
   }
